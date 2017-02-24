@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6CB6798C-D2FC-44FE-A5F1-5D108DE03794}</ProjectGuid>
+    <ProjectGuid>{CC89E7E4-5D71-427F-878E-BFE9BC37EAAB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GiosAirPollutionClient</RootNamespace>
