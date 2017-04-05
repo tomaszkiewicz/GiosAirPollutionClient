@@ -29,7 +29,7 @@ namespace GiosAirPollutionClient
                         StationName = ((string)item.stationName).CutFrom(",").Trim(),
                         Measurements = new Dictionary<string, decimal>(),
                         AirQualityIndex = item.aqIndex,
-                        Time = DateTime.UtcNow
+                        Time = GetCurrentHourDateTime()
                     };
 
                     foreach (var value in item.values)
@@ -40,6 +40,11 @@ namespace GiosAirPollutionClient
             }
 
             return measurements;
+        }
+
+        private static DateTime GetCurrentHourDateTime()
+        {
+            return DateTime.UtcNow.AddMinutes(-DateTime.UtcNow.Minute).AddSeconds(-DateTime.Now.Second).AddMilliseconds(-DateTime.Now.Millisecond);
         }
     }
 }
